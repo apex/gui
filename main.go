@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"crypto/md5"
 	"encoding/hex"
+	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
@@ -28,19 +29,22 @@ func serve(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	name := "ShadowButton"
+	var in struct {
+		Name   string            `json:"name"`
+		Config components.Config `json:"config"`
+	}
 
-	ctx := log.WithFields(log.Fields{
-		"name": name,
-	})
+	if err := json.NewDecoder(r.Body).Decode(&in); err != nil {
+		log.WithError(err).Error("parsing body")
+		http.Error(w, "Malformed request body.", http.StatusBadRequest)
+		return
+	}
 
+	ctx := log.WithField("name", in.Name)
 	ctx.Info("rendering")
 
 	var buf bytes.Buffer
-	err := components.Render(&buf, name, components.Config{
-		"text": "SUBSCRIBE",
-	})
-
+	err := components.Render(&buf, in.Name, in.Config)
 	if err != nil {
 		ctx.WithError(err).Error("rendering")
 		http.Error(w, "Error rendering.", http.StatusBadRequest)
