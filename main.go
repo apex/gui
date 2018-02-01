@@ -8,10 +8,12 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strings"
 
 	"github.com/apex/gui/components"
 	"github.com/apex/log"
 	"github.com/tj/go/env"
+	"github.com/tj/go/http/request"
 )
 
 func main() {
@@ -29,22 +31,26 @@ func serve(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var in struct {
-		Name   string            `json:"name"`
-		Config components.Config `json:"config"`
-	}
+	name := request.Param(r, "name")
+	config := request.Param(r, "config")
+	var c components.Config
 
-	if err := json.NewDecoder(r.Body).Decode(&in); err != nil {
-		log.WithError(err).Error("parsing body")
-		http.Error(w, "Malformed request body.", http.StatusBadRequest)
+	if strings.TrimSpace(name) == "" {
+		http.Error(w, "Component `name` parameter is required.", http.StatusBadRequest)
 		return
 	}
 
-	ctx := log.WithField("name", in.Name)
+	if err := json.Unmarshal([]byte(config), &c); err != nil {
+		log.WithError(err).Error("parsing config")
+		http.Error(w, "Component `config` parameter is malformed.", http.StatusBadRequest)
+		return
+	}
+
+	ctx := log.WithField("name", name)
 	ctx.Info("rendering")
 
 	var buf bytes.Buffer
-	err := components.Render(&buf, in.Name, in.Config)
+	err := components.Render(&buf, name, c)
 	if err != nil {
 		ctx.WithError(err).Error("rendering")
 		http.Error(w, "Error rendering.", http.StatusBadRequest)
