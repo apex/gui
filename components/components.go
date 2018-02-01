@@ -3,7 +3,7 @@ package components
 import (
 	"io"
 
-	"github.com/alecthomas/template"
+	"html/template"
 )
 
 // defaultFont is a list of system fonts.
