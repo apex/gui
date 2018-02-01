@@ -3,3 +3,4 @@ gin-bin
 .cache
 dist
 elm-stuff/
+node_modules/
