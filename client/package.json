@@ -1,13 +1,10 @@
 {
   "dependencies": {
-    "aws-sdk": "^2.181.0",
     "babel-plugin-react-html-attrs": "^2.1.0",
     "babel-plugin-react-require": "^3.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-virtualized": "^9.17.0",
-    "sleep-promise": "^2.0.0"
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
