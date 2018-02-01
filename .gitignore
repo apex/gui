@@ -1,2 +1,4 @@
 .DS_Store
 gin-bin
+.cache
+dist
