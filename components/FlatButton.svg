@@ -3,7 +3,7 @@
     <g id="Buttons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="FlatButton">
             <g id="Button" transform="translate(318.000000, 35.000000)">
-                <rect fill="#7950F2" x="0" y="0" width="252" height="51"></rect>
+                <rect fill="#{{or .color "7950F2"}}" x="0" y="0" width="252" height="51"></rect>
                 <text font-family="{{.font}}" font-size="11" font-weight="bold" letter-spacing="2.01666665" fill="#FFFFFF" text-anchor="middle">
                     <tspan x="128" y="30">{{.text}}</tspan>
                 </text>
