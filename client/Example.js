@@ -8,8 +8,22 @@ import './Example.css'
  */
 
 export default class extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      config: props.config
+    }
+  }
+
+  onChange(config) {
+    this.setState({
+      config: JSON.parse(config)
+    })
+  }
+
   render() {
-    const { name, desc, config } = this.props
+    const { name, desc } = this.props
+    const { config } = this.state
 
     return <div class="Example">
       <div class="info">
@@ -20,7 +34,7 @@ export default class extends Component {
       <Editor
         id={name}
         value={JSON.stringify(config, null, 2)}
-        onChange={e => this.onChnage(e)} />
+        onChange={e => this.onChange(e)} />
 
       <Preview
         name={name}
