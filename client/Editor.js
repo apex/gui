@@ -8,7 +8,7 @@ import './Editor.css'
  * Editor is a code editor.
  */
 
-export default function({ id, value }) {
+export default function({ id, value, onChange }) {
   return <div class="Editor">
     <AceEditor
       name={id}
@@ -19,7 +19,7 @@ export default function({ id, value }) {
       width={400}
       showGutter={false}
       highlightActiveLine={false}
-      onChange={e => console.log(e)}
+      onChange={onChange}
       editorProps={{ $blockScrolling: true }}
     />
   </div>
