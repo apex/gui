@@ -4,7 +4,10 @@ import Editor from './Editor'
 import './Example.css'
 
 /**
- * Example is an component example .
+ * Example is an component example.
+ *
+ * This component is stateful in order to re-render
+ * the preview and update the copy/paste link.
  */
 
 export default class extends Component {
