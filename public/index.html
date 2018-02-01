@@ -3,8 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>GitHub UI</title>
+    <script src="https://unpkg.com/hyperapp"></script>
   </head>
   <body>
-    testing
+    <script>
+      const { h, app } = hyperapp
+
+      const state = {
+        count: 0
+      }
+
+      const actions = {
+        down: value => state => ({ count: state.count - value }),
+        up: value => state => ({ count: state.count + value })
+      }
+
+      const view = (state, actions) =>
+        h("div", {}, [
+          h("h1", {}, state.count),
+          h("button", { onclick: () => actions.down(1) }, "–"),
+          h("button", { onclick: () => actions.up(1) }, "+")
+        ])
+
+      const main = app(state, actions, view, document.body)
+    </script>
   </body>
 </html>
