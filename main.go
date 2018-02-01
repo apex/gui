@@ -12,7 +12,6 @@ import (
 
 	"github.com/apex/log"
 	"github.com/tj/go/env"
-	"github.com/tj/go/http/request"
 
 	"github.com/apex/gui/components"
 )
@@ -43,8 +42,8 @@ func handle(w http.ResponseWriter, r *http.Request) {
 
 // component renders a component.
 func component(w http.ResponseWriter, r *http.Request) {
-	name := request.Param(r, "name")
-	config := request.Param(r, "config")
+	name := r.URL.Query().Get("name")
+	config := r.URL.Query().Get("config")
 	var c components.Config
 
 	if strings.TrimSpace(name) == "" {
