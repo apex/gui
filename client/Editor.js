@@ -15,7 +15,8 @@ export default function({ id, value }) {
       mode="json"
       theme="github"
       value={value}
-      height={300}
+      height={200}
+      width={400}
       showGutter={false}
       highlightActiveLine={false}
       onChange={e => console.log(e)}
