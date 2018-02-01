@@ -10,5 +10,5 @@ const api = 'http://localhost:3000'
  */
 
 export function url({ name, config }) {
-  return `http://${api}/component?name=${name}&config=${JSON.stringify(config)}`
+  return `${api}/component?name=${name}&config=${JSON.stringify(config)}`
 }

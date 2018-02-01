@@ -1,6 +1,6 @@
 
 import './Preview.css'
-import * as api from './api'
+import { url } from './api'
 
 /**
  * Preview is a component preview loader.
