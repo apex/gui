@@ -15,6 +15,8 @@ export default function({ id, value }) {
       mode="json"
       theme="github"
       value={value}
+      showGutter={false}
+      highlightActiveLine={false}
       onChange={e => console.log(e)}
       editorProps={{ $blockScrolling: true }}
     />
