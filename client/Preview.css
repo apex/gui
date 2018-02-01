@@ -1,4 +1,6 @@
 .Preview {
   width: 888px;
   border: 1px solid #eee;
+  display: flex;
+  align-items: center;
 }
