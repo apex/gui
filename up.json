@@ -1,0 +1,7 @@
+{
+  "name": "gui",
+  "description": "GitHub UI",
+  "cors": {
+    "enable": true
+  }
+}
