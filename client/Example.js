@@ -25,7 +25,7 @@ export default class extends Component {
   }
 
   render() {
-    const { name, desc } = this.props
+    const { name, desc, count } = this.props
     const { config } = this.state
 
     return <div class="Example">
@@ -41,7 +41,8 @@ export default class extends Component {
 
       <Preview
         name={name}
-        config={config} />
+        config={config}
+        count={count} />
     </div>
   }
 }
