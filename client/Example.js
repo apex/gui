@@ -8,8 +8,10 @@ import './Example.css'
 
 export default function({ name, desc, config }) {
   return <div class="Example">
-    <span class="name">{name}</span>
-    <p class="desc">{desc}</p>
+    <div class="info">
+      <span class="name">{name}</span>
+      <p class="desc">{desc}</p>
+    </div>
     <Editor id={name} value={JSON.stringify(config, null, 2)} />
     <Preview name={name} config={config} />
   </div>
