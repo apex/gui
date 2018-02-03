@@ -8,6 +8,11 @@
   "stages": {
     "staging": {
       "domain": "gui.apex.sh"
+    },
+    "development": {
+      "proxy": {
+        "command": "gin --port $PORT"
+      }
     }
   }
 }
