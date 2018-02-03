@@ -5,8 +5,6 @@
 Feature is a feature block.
 
 ![](https://gui.apex.sh/component?name=Feature&config={"title":"TITLE","text":"Some description here."})
-![](https://gui.apex.sh/component?name=Feature&config={"title":"TITLE","text":"Some description here."})
-![](https://gui.apex.sh/component?name=Feature&config={"title":"TITLE","text":"Some description here."})
 
 ## FlatButton
 
