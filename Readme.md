@@ -1,6 +1,6 @@
 ## GitHub UI
 
-Go webserver for dynamically generating GitHub readme components as SVG — powered by [Up](https://github.com/apex/up) on AWS Lambda.
+Go webserver for dynamically generating GitHub readme components as SVG — powered by [Apex Up](https://github.com/apex/up) on AWS Lambda.
 
 ## FlatButton
 
