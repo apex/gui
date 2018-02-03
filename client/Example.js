@@ -34,7 +34,6 @@ export default class extends Component {
         <p class="desc">{desc}</p>
       </div>
 
-
       <Preview
         name={name}
         config={config}
