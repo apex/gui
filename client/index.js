@@ -15,10 +15,4 @@ ReactDOM.render(<App>
     desc="A stylish shadowed button with configurable color."
     config={{ text: "SUBSCRIBE", color: '7956EF' }}
   />
-
-  <Example
-    name="Feature"
-    desc="A feature block describing the functionality of a project."
-    config={{ title: "TITLE", text: 'Some description here.' }}
-  />
 </App>, document.querySelector('#app'))
