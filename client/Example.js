@@ -34,15 +34,16 @@ export default class extends Component {
         <p class="desc">{desc}</p>
       </div>
 
-      <Editor
-        id={name}
-        value={JSON.stringify(config, null, 2)}
-        onChange={e => this.onChange(e)} />
 
       <Preview
         name={name}
         config={config}
         count={count} />
+
+      <Editor
+        id={name}
+        value={JSON.stringify(config, null, 2)}
+        onChange={e => this.onChange(e)} />
     </div>
   }
 }
