@@ -3,5 +3,10 @@
   "description": "GitHub UI",
   "cors": {
     "enable": true
+  },
+  "stages": {
+    "staging": {
+      "domain": "gui.apex.sh"
+    }
   }
 }
