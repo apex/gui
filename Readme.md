@@ -1,4 +1,8 @@
-<img src="http://tjholowaychuk.com:6000/svg/title/TITLE/SUBTITLE">
+<img src="http://tjholowaychuk.com:6000/svg/title/GITHUB/UI">
+
+## About
+
+Little Go webserver for generating GitHub readme components as SVG, powered by [Up](https://github.com/apex/up) on AWS Lambda.
 
 ## Feature
 
