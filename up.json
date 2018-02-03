@@ -5,6 +5,9 @@
   "cors": {
     "enable": true
   },
+  "lambda": {
+    "memory": 128
+  },
   "stages": {
     "staging": {
       "domain": "gui.apex.sh"

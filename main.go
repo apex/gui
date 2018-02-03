@@ -11,6 +11,7 @@ import (
 	"strings"
 
 	"github.com/apex/log"
+	jsonhandler "github.com/apex/log/handlers/json"
 	"github.com/tj/go/env"
 
 	"github.com/apex/gui/components"
@@ -21,6 +22,7 @@ var static = http.FileServer(http.Dir("public"))
 
 // main function.
 func main() {
+	log.SetHandler(jsonhandler.Default)
 	addr := ":" + env.GetDefault("PORT", "3000")
 	err := http.ListenAndServe(addr, http.HandlerFunc(handle))
 	if err != nil {
