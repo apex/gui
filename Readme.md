@@ -1,5 +1,17 @@
 <img src="http://tjholowaychuk.com:6000/svg/title/TITLE/SUBTITLE">
 
+## FlatButton
+
+FlatButton is a flat button.
+
+![](https://gui.apex.sh/component?name=FlatButton&config={"text":"SUBSCRIBE","color":"7956EF"})
+
+## ShadowButton
+
+ShadowButton is a shadowed button.
+
+![](https://gui.apex.sh/component?name=ShadowButton&config={"text":"SUBSCRIBE","color":"7956EF"})
+
 ---
 
 [![GoDoc](https://godoc.org/github.com/apex/gui?status.svg)](https://godoc.org/github.com/apex/gui)
