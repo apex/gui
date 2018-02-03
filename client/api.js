@@ -12,5 +12,6 @@ const api = process.env.NODE_ENV == 'production'
  */
 
 export function url({ name, config }) {
-  return `${api}/component?name=${name}&config=${JSON.stringify(config)}`
+  const c = encodeURIComponent(JSON.stringify(config))
+  return `${api}/component?name=${name}&config=${c}`
 }
