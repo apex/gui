@@ -3,7 +3,9 @@
  * API endpoint.
  */
 
-const api = 'http://localhost:3000'
+const api = process.env.NODE_ENV == 'production'
+  ? 'https://gui.apex.sh'
+  : 'http://localhost:3000'
 
 /**
  * URL returns the preview url.
