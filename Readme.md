@@ -4,19 +4,23 @@
 
 Little Go webserver for generating GitHub readme components as SVG, powered by [Up](https://github.com/apex/up) on AWS Lambda.
 
-## FlatButton
+## Components
 
-FlatButton is a flat button.
+Components available.
+
+### FlatButton
+
+FlatButton is a full-width flat button.
 
 ![](https://gui.apex.sh/component?name=FlatButton&config={"text":"SUBSCRIBE","color":"7956EF"})
 
-## ShadowButton
+### ShadowButton
 
-ShadowButton is a shadowed button.
+ShadowButton is a full-width shadowed button.
 
 ![](https://gui.apex.sh/component?name=ShadowButton&config={"text":"SUBSCRIBE","color":"7956EF"})
 
-## Running Locally
+## Development
 
 Run the server:
 
@@ -27,7 +31,7 @@ $ up start
 Run the client:
 
 ```
-$ make start`
+$ make start
 ```
 
 ---
