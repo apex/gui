@@ -4,14 +4,9 @@
   margin: 25px 0;
 }
 
-.Example .info {
-
-}
-
-.Example .Editor {
-
-}
-
-.Example .Preview {
-
+.Example > .info .name {
+  letter-spacing: 0.05rem;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+  font-size: 14px;
 }
