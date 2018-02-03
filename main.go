@@ -18,7 +18,7 @@ import (
 )
 
 // static files.
-var static = http.FileServer(http.Dir("public"))
+var static = http.FileServer(http.Dir("dist"))
 
 // main function.
 func main() {

@@ -8,6 +8,9 @@
   "lambda": {
     "memory": 128
   },
+  "hooks": {
+    "prebuild": "parcel build client/index.html --public-url ."
+  },
   "stages": {
     "production": {
       "domain": "gui.apex.sh"
