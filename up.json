@@ -1,6 +1,7 @@
 {
   "name": "gui",
   "description": "GitHub UI",
+  "profile": "apex",
   "cors": {
     "enable": true
   },
