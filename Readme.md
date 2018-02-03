@@ -1,20 +1,14 @@
-<img src="http://tjholowaychuk.com:6000/svg/title/GITHUB/UI">
-
-## About
+## GitHub UI
 
 Little Go webserver for generating GitHub readme components as SVG, powered by [Up](https://github.com/apex/up) on AWS Lambda.
 
-## Components
-
-Components available.
-
-### FlatButton
+## FlatButton
 
 FlatButton is a full-width flat button.
 
 ![](https://gui.apex.sh/component?name=FlatButton&config={"text":"SUBSCRIBE","color":"7956EF"})
 
-### ShadowButton
+## ShadowButton
 
 ShadowButton is a full-width shadowed button.
 
