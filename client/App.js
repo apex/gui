@@ -1,3 +1,4 @@
+import './colors.css'
 import './App.css'
 
 /**

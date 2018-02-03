@@ -1,6 +1,7 @@
 .Example {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid var(--oc-gray-1);
   margin: 25px 0;
 }
 
