@@ -6,6 +6,10 @@
   height: 600px;
 }
 
+.Example:last-child {
+  border-bottom: none;
+}
+
 .Example > .info {
   text-align: center;
   line-height: 1.25;
