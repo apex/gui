@@ -9,7 +9,7 @@
     "memory": 128
   },
   "stages": {
-    "staging": {
+    "production": {
       "domain": "gui.apex.sh"
     },
     "development": {
