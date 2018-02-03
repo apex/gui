@@ -4,3 +4,4 @@ gin-bin
 dist
 elm-stuff/
 node_modules/
+server
