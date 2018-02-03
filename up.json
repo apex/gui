@@ -14,7 +14,7 @@
     },
     "development": {
       "proxy": {
-        "command": "gin --port $PORT"
+        "command": "go run main.go"
       }
     }
   }

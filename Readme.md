@@ -24,6 +24,20 @@ ShadowButton is a shadowed button.
 
 ![](https://gui.apex.sh/component?name=ShadowButton&config={"text":"SUBSCRIBE","color":"7956EF"})
 
+## Running Locally
+
+Run the server:
+
+```
+$ up start
+```
+
+Run the client:
+
+```
+$ make start`
+```
+
 ---
 
 [![GoDoc](https://godoc.org/github.com/apex/gui?status.svg)](https://godoc.org/github.com/apex/gui)
