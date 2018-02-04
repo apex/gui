@@ -1,0 +1,7 @@
+.DS_Store
+gin-bin
+.cache
+dist
+elm-stuff/
+node_modules/
+server

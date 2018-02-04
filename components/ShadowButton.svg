@@ -1,0 +1,25 @@
+<svg width="888px" height="121px" viewBox="0 0 888 121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="0" y="0" width="252" height="51" rx="2"></rect>
+        <filter x="-3.4%" y="-12.7%" width="106.7%" height="133.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.107818161 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Buttons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ShadowButton">
+            <g id="Button" transform="translate(318.000000, 35.000000)">
+                <g>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#{{or .color "7950F2"}}" stroke-width="1" x="0.5" y="0.5" width="251" height="50" rx="2"></rect>
+                </g>
+                <text font-family="{{.font}}" font-size="11" font-weight="bold" letter-spacing="2.01666665" fill="#{{or .color "5F3DC4"}}" text-anchor="middle">
+                    <tspan x="128" y="30">{{.text}}</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

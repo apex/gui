@@ -1,0 +1,21 @@
+{
+  "name": "gui",
+  "description": "GitHub UI",
+  "profile": "apex",
+  "cors": {
+    "enable": true
+  },
+  "hooks": {
+    "prebuild": "parcel build client/index.html --public-url ."
+  },
+  "stages": {
+    "production": {
+      "domain": "gui.apex.sh"
+    },
+    "development": {
+      "proxy": {
+        "command": "go run main.go"
+      }
+    }
+  }
+}
