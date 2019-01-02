@@ -1,6 +1,5 @@
 
 import './Preview.css'
-import range from 'lodash.range'
 import { url } from './api'
 
 /**
