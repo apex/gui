@@ -9,6 +9,7 @@
     "lodash.debounce": "^4.0.8",
     "react": "^16.2.0",
     "react-ace": "^5.9.0",
+    "react-color": "^2.17.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
