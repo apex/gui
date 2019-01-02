@@ -1,0 +1,20 @@
+.Input > input {
+  padding: 9px 25px 10px 15px;
+  appearance: none;
+  outline: 0;
+  background: var(--oc-white);
+  font-size: .9em;
+  font-family: inherit;
+  border: none;
+  border: 1px solid var(--oc-gray-4);
+  color: var(--oc-gray-5);
+  transition: all .2s;
+  margin-bottom: 30px;
+}
+
+.Input > input:focus,
+.Input > input:active {
+  border-color: var(--oc-blue-7);
+  color: var(--oc-gray-7);
+  box-shadow: inset 0 1px 1px rgba(var(--oc-black-rgb),.075), 0 0 0 3px rgba(var(--oc-blue-7-rgb),.1);
+}
