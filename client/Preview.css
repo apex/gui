@@ -2,4 +2,5 @@
   width: 888px;
   display: flex;
   align-items: center;
+  min-height: 121px;
 }
