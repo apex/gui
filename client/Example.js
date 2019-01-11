@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import debounce from 'lodash.debounce'
 import Preview from './Preview'
 import Editor from './Editor'
 import './Example.css'
@@ -16,6 +17,8 @@ export default class extends Component {
     this.state = {
       config: props.config
     }
+
+    this.onChangeDebounced = debounce(this.onChange, 400)
   }
 
   onChange(config) {
@@ -38,7 +41,7 @@ export default class extends Component {
         <Editor
           id={name}
           value={JSON.stringify(config, null, 2)}
-          onChange={e => this.onChange(e)} />
+          onChange={e => this.onChangeDebounced(e)} />
 
         <Preview
           name={name}
